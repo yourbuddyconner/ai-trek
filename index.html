@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trek 2025</title>
+    <meta content="AI Trek 2025" property="og:title">
+    <meta content="https://yourbuddyconner.github.io/ai-trek/public/preview.png" property="og:image">
+    <meta content="AI Trek 2025" property="twitter:title">
+    <meta content="https://yourbuddyconner.github.io/ai-trek/public/preview.png" property="twitter:image">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Typography Hierarchy */
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+
+        h6 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-contents {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            text-transform: capitalize;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .blue-button, .white-button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .blue-button {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        .blue-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .white-button {
+            background: #ffffff;
+            color: #2563eb;
+            border: 1px solid #e5e7eb;
+        }
+
+        .white-button:hover {
+            background: #f9fafb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            width: 100%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%232563eb" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%232563eb" opacity="0.08"/><circle cx="40" cy="80" r="1" fill="%232563eb" opacity="0.12"/></svg>');
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tag-flex {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .large-heading {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .medium-text {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            opacity: 0.8;
+            line-height: 1.5;
+            color: #4a5568;
+        }
+
+        .large-text {
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            opacity: 0.8;
+            color: #4a5568;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-separator {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        .limit {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .limit-medium {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Speakers Grid */
+        .four-column-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .speaker-image-wrap {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .speaker-image-wrap:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .speaker-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .space-top-small {
+            margin-top: 15px;
+        }
+
+        .space-top-tiny {
+            margin-top: 10px;
+        }
+
+        .opacity-white-text {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #6b7280;
+        }
+
+        /* Agenda Section */
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .single-step-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .agenda-dot {
+            width: 8px;
+            height: 8px;
+            background: #2563eb;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Sponsors */
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .logo-wrap {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .logo-wrap:hover {
+            border-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Testimonials */
+        .three-column-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(37, 99, 235, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-portrait {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 15px auto;
+        }
+
+        /* Form */
+        .form-block {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .split-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .text-field {
+            width: 100%;
+            padding: 12px;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            color: #1f2937;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .text-field:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .text-field::placeholder {
+            color: #9ca3af;
+        }
+
+        /* Footer */
+        footer {
+            background: #f9fafb;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #6b7280;
+        }
+
+        footer p:first-child {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .large-heading {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .hero-section {
+                min-height: 100vh;
+                padding: 80px 0 40px;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .split {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .split-fields {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .four-column-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .large-heading {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .medium-text {
+                font-size: 1.1rem;
+            }
+
+            .hero-section {
+                min-height: 100vh;
+                padding: 60px 0 30px;
+            }
+
+            .tag-flex {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-contents">
+            <a href="#" class="brand">AI Trek</a>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#speakers" class="nav-link">Speakers</a>
+                <a href="#agenda" class="nav-link">Agenda</a>
+                <a href="#sponsors" class="nav-link">Sponsors</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#tickets" class="white-button">Get Tickets</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="tag-flex">
+                <div class="title"><strong>2025</strong></div>
+            </div>
+            <h1 class="large-heading">AI Trek</h1>
+            <div class="tag-flex">
+                <div class="title">June 15th, 2025</div>
+                <div class="title">San Francisco, CA</div>
+            </div>
+            <p class="medium-text"><strong>A premier AI Conference for founders, builders, investors, corporate leaders and researchers</strong></p>
+            <a href="#tickets" class="blue-button">Get Tickets</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <div class="title">2025 theme</div>
+                </div>
+                <div>
+                    <h2><strong>Charting New Frontiers - </strong><span class="opacity-white-text"><strong>Where AI meets Innovation</strong></span></h2>
+                    <a href="#tickets" class="blue-button">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="section">
+        <div class="container">
+            <div class="center-content limit-medium">
+                <h2>Speakers</h2>
+            </div>
+            <div class="four-column-grid">
+                <div>
+                    <div class="speaker-image-wrap">
+                        <img src="https://place-hold.it/300x300/4a9eff/ffffff?text=Speaker+1" alt="Speaker 1" class="speaker-image">
+                    </div>
+                    <div class="space-top-small">
+                        <h6>Dr. Sarah Chen</h6>
+                        <div class="opacity-white-text">AI Research Director at TechCorp</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="speaker-image-wrap">
+                        <img src="https://place-hold.it/300x300/7c3aed/ffffff?text=Speaker+2" alt="Speaker 2" class="speaker-image">
+                    </div>
+                    <div class="space-top-small">
+                        <h6>Michael Rodriguez</h6>
+                        <div class="opacity-white-text">Founder & CEO at AI Dynamics</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="speaker-image-wrap">
+                        <img src="https://place-hold.it/300x300/10b981/ffffff?text=Speaker+3" alt="Speaker 3" class="speaker-image">
+                    </div>
+                    <div class="space-top-small">
+                        <h6>Dr. Amanda Johnson</h6>
+                        <div class="opacity-white-text">Partner at Innovation Ventures</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="speaker-image-wrap">
+                        <img src="https://place-hold.it/300x300/f59e0b/ffffff?text=Speaker+4" alt="Speaker 4" class="speaker-image">
+                    </div>
+                    <div class="space-top-small">
+                        <h6>David Kim</h6>
+                        <div class="opacity-white-text">Chief AI Officer at FutureTech</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="speaker-image-wrap">
+                        <img src="https://place-hold.it/300x300/ef4444/ffffff?text=Speaker+5" alt="Speaker 5" class="speaker-image">
+                    </div>
+                    <div class="space-top-small">
+                        <h6>Dr. Emily Watson</h6>
+                        <div class="opacity-white-text">ML Engineer at Google AI</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="speaker-image-wrap">
+                        <img src="https://place-hold.it/300x300/8b5cf6/ffffff?text=Speaker+6" alt="Speaker 6" class="speaker-image">
+                    </div>
+                    <div class="space-top-small">
+                        <h6>James Liu</h6>
+                        <div class="opacity-white-text">VP of AI at Microsoft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Agenda Section -->
+    <section id="agenda" class="section">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <h2>A sneak peek into Agenda:</h2>
+                    <img src="https://place-hold.it/400x300/4a9eff/ffffff?text=AI+Trek+Mirror" alt="AI Trek Mirror" style="border-radius: 12px; margin-top: 30px;">
+                </div>
+                <div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">The Future of Large Language Models</p>
+                    </div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">AI in Healthcare: Revolutionary Applications</p>
+                    </div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">Building AI-First Startups</p>
+                    </div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">The Ethics of Artificial Intelligence</p>
+                    </div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">Computer Vision and Autonomous Systems</p>
+                    </div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">AI Investment Trends and Opportunities</p>
+                    </div>
+                    <div class="single-step-wrapper">
+                        <div class="agenda-dot"></div>
+                        <p class="medium-text">Open Source AI: Community and Collaboration</p>
+                    </div>
+                    <a href="#agenda-full" class="blue-button space-top-small">View full Agenda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="section">
+        <div class="container">
+            <div class="center-content limit-medium">
+                <h2>Our Sponsors</h2>
+                <p class="medium-text">Our event is proudly sponsored by leading tech companies committed to supporting the AI community.</p>
+            </div>
+            <div class="logos-grid">
+                <div class="logo-wrap">
+                    <img src="https://place-hold.it/150x60/4a9eff/ffffff?text=TechCorp" alt="TechCorp" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="logo-wrap">
+                    <img src="https://place-hold.it/150x60/7c3aed/ffffff?text=AI+Dynamics" alt="AI Dynamics" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="logo-wrap">
+                    <img src="https://place-hold.it/150x60/10b981/ffffff?text=FutureTech" alt="FutureTech" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="logo-wrap">
+                    <img src="https://place-hold.it/150x60/f59e0b/ffffff?text=InnoVentures" alt="InnoVentures" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="center-content">
+                <h2>Testimonials</h2>
+            </div>
+            <div class="three-column-grid">
+                <div class="testimonial-card">
+                    <div class="center-content">
+                        <div class="space-top-tiny">
+                            <div class="large-text">"AI Trek was an incredible experience! The quality of speakers and networking opportunities were unmatched. This event truly pushes the boundaries of what's possible in AI."</div>
+                        </div>
+                        <img src="https://place-hold.it/50x50/4a9eff/ffffff?text=JD" alt="John Doe" class="testimonial-portrait">
+                        <div>John Doe</div>
+                        <div class="opacity-white-text">CTO at StartupX</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="center-content">
+                        <div class="space-top-tiny">
+                            <div class="large-text">"The insights shared at AI Trek were game-changing for our company. We implemented several strategies discussed at the conference and saw immediate results."</div>
+                        </div>
+                        <img src="https://place-hold.it/50x50/7c3aed/ffffff?text=JS" alt="Jane Smith" class="testimonial-portrait">
+                        <div>Jane Smith</div>
+                        <div class="opacity-white-text">AI Product Manager at TechGiant</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="center-content">
+                        <div class="space-top-tiny">
+                            <div class="large-text">"AI Trek brings together the brightest minds in AI. The conversations and connections made here continue to benefit our research months later."</div>
+                        </div>
+                        <img src="https://place-hold.it/50x50/10b981/ffffff?text=MB" alt="Mike Brown" class="testimonial-portrait">
+                        <div>Mike Brown</div>
+                        <div class="opacity-white-text">Research Scientist at AI Lab</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Venue Section -->
+    <section class="section">
+        <div class="container">
+            <div class="center-content limit">
+                <h2>Venue</h2>
+                <p class="medium-text">Innovation Hub in the Heart of San Francisco</p>
+            </div>
+            <div class="split">
+                <div>
+                    <div class="title">Total Capacity: 800<br>Address: 123 Innovation St</div>
+                    <h3>SF Tech Center</h3>
+                </div>
+                <img src="https://place-hold.it/600x400/4a9eff/ffffff?text=SF+Tech+Center" alt="SF Tech Center" style="border-radius: 12px; width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <h2>Join the AI Trek Journey</h2>
+                    <img src="https://place-hold.it/400x300/7c3aed/ffffff?text=AI+Trek+Logo" alt="AI Trek" style="border-radius: 12px; margin-top: 30px;">
+                </div>
+                <div class="form-block">
+                    <h4>Get in touch</h4>
+                    <form class="form">
+                        <div class="split-fields">
+                            <div>
+                                <label for="name" class="field-label">Your name</label>
+                                <input class="text-field" type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+                            </div>
+                            <div>
+                                <label for="email" class="field-label">Your email</label>
+                                <input class="text-field" type="email" id="email" name="email" placeholder="e.g. hello@company.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="interest" class="field-label">I'm interested in...</label>
+                            <select class="text-field" id="interest" name="interest">
+                                <option value="attending">Attending</option>
+                                <option value="speaking">Speaking</option>
+                                <option value="sponsoring">Sponsoring</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="field-label">Your Message</label>
+                            <textarea class="text-field" id="message" name="message" placeholder="Tell us more..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="blue-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Trek. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Building the future of artificial intelligence, one connection at a time.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple form submission handler
+        document.querySelector('.form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will get back to you soon.');
+        });
+    </script>
+</body>
+</html> 
